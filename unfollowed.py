@@ -22,7 +22,7 @@ access_token_secret = <your access token secret>
 # Define supported parameters and default values
 parser = argparse.ArgumentParser(description='Details about who you are following, and who you have followed or unfollowed since the last time this tool ran. Twitter has a widely acknowledged but not understood \"unfollow bug\" in which you may stop following others for no apparent reason. This script is useful for seeing whom you have unfollowed.')
 parser.add_argument('-a', '--alias', dest='twitter_alias', default='', required=False, help='Twitter alias whose follows to analyze. If none provided, will default to the user whose API key is used.')
-parser.add_argument('-l', '--list-all', dest='list_all', default=False, action='store_true', help='List all aliases I am following (instead of only showinf the change since the last run)')
+parser.add_argument('-l', '--list-all', dest='list_all', default=False, action='store_true', help='List all aliases I am following (instead of only showing the change since the last run)')
 parser.add_argument('-p', '--proxy', default='', required=False, help='HTTPS proxy to use, if necessary, in the form of https://proxy.com:port')
 args=parser.parse_args()
 twitter_user=args.twitter_alias
